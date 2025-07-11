@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options.js";
 import { NextResponse } from "next/server";
-import { connectDb } from "@/lib/db";
+import { connectDb } from "@/lib/db.js";
 import { uploadImage } from "@/lib/cloudinary";
 import { Album } from "@/models/album.model";
 
