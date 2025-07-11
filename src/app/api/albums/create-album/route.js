@@ -1,9 +1,10 @@
-import { uploadImage } from "@/lib/cloudinary";
-import { NextResponse } from "next/server";
-import { Album } from "@/models/album.model";
-import { connectDb } from "@/lib/db";
-import { getServerSession } from 'next-auth';
+import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options";
+import { NextResponse } from "next/server";
+import { connectDb } from "@/lib/db";
+import { uploadImage } from "@/lib/cloudinary";
+import { Album } from "@/models/album.model";
+
 
 export async function POST(req) {
   try {
