@@ -71,7 +71,7 @@ const PlayBackControls = () => {
     }
   }
   return (
-    <footer className="h-fit md:h-24 bg-zinc-900 border-t border-zinc-800 px-4 max-md:py-4 max-md:px-2">
+    <footer className="h-fit md:h-24 z-50 fixed bottom-0 w-full bg-zinc-900 border-t border-zinc-800 px-4 max-md:py-4 max-md:px-2">
       <div className={`flex max-md:flex-col ${currentSong ? "justify-between" : "mx-auto"} items-center h-full max-w-[1800px] mx-auto`}>
         {/* Currently Playing Song */}
         <div className='hidden md:flex items-center gap-4 min-w-[180px] w-[30%]'>
@@ -208,7 +208,7 @@ const PlayBackControls = () => {
                 <p className="text-sm font-medium truncate">
                   {currentSong?.title || "No song selected"}
                 </p>
-                <div className="flex items-center w-[90%] overflow-hidden">
+                <div className="flex items-center w-[60%] overflow-hidden">
                   <p className="text-xs text-zinc-400 truncate">
                     {currentSong?.artist || "Unknown artist"}
                   </p>
