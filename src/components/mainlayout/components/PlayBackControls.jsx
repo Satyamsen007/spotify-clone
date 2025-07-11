@@ -208,7 +208,7 @@ const PlayBackControls = () => {
                 <p className="text-sm font-medium truncate">
                   {currentSong?.title || "No song selected"}
                 </p>
-                <div className="flex items-center w-[40%] overflow-hidden">
+                <div className="flex items-center w-full overflow-hidden">
                   <p className="text-xs text-zinc-400 truncate">
                     {currentSong?.artist || "Unknown artist"}
                   </p>
