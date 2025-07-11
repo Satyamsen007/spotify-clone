@@ -29,7 +29,7 @@ const AdminNavbar = () => {
           <DropdownMenuTrigger asChild>
             <Avatar className="w-10 h-10 cursor-pointer border-2 border-green-400 hover:scale-105 hover:shadow-lg transition-all duration-200 select-none">
               <AvatarImage
-                src={session?.user?.image}
+                src={session?.user?.imageUrl}
                 alt={session.user.fullName || 'User avatar'}
                 className="object-cover"
               />
@@ -51,8 +51,9 @@ const AdminNavbar = () => {
             <div className="px-5 py-4 flex items-center gap-4 border-b border-zinc-800">
               <Avatar className="w-12 h-12 ring-2 ring-green-400 select-none">
                 <AvatarImage
-                  src={session?.user?.image}
+                  src={session?.user?.imageUrl}
                   alt={session.user.fullName || 'User avatar'}
+                  className="object-cover"
                 />
                 <AvatarFallback className="bg-green-100 text-green-800">
                   {session.user.fullName

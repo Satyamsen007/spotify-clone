@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 
 const AdminPage = () => {
+  if (typeof window === "undefined") return null;
   const { data: session } = useSession();
   const user = session?.user;
   const isAdmin = session?.user?.admin;
