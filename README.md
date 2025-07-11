@@ -12,7 +12,7 @@ Fast. Responsive. Just like the real deal.
 
 ## 🚀 Live Demo
 
-🌐 [View Spotify Clone Online](https://spotify-clone-demo.vercel.app)
+🌐 [View Spotify Clone Online](https://spotify-clone-omega-gold.vercel.app)
 
 ---
 
