@@ -204,11 +204,11 @@ const PlayBackControls = () => {
                   className='object-cover rounded'
                 />
               </div>
-              <div className="min-w-0">
+              <div className="w-28">
                 <p className="text-sm font-medium truncate">
                   {currentSong?.title || "No song selected"}
                 </p>
-                <div className="flex items-center w-[60%] overflow-hidden">
+                <div className="flex items-center w-[40%] overflow-hidden">
                   <p className="text-xs text-zinc-400 truncate">
                     {currentSong?.artist || "Unknown artist"}
                   </p>
