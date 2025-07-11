@@ -2,14 +2,14 @@ import { uploadImage } from "@/lib/cloudinary";
 import { NextResponse } from "next/server";
 import { Album } from "@/models/album.model";
 import { connectDb } from "@/lib/db";
-import { authOptions } from "@/app/api/auth/[...nextauth]/options";
 import { getServerSession } from 'next-auth';
+import { authOptions } from "../../auth/[...nextauth]/options";
 
 export async function POST(req) {
   try {
     const session = await getServerSession(authOptions);
     const isAdmin = session?.user?.admin;
-    
+
     // Check if user is authenticated
     if (!session?.user) {
       return NextResponse.json({
