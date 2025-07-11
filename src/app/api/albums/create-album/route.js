@@ -2,7 +2,7 @@ import { uploadImage } from "@/lib/cloudinary";
 import { NextResponse } from "next/server";
 import { Album } from "@/models/album.model";
 import { connectDb } from "@/lib/db";
-import { authOptions } from "../../auth/[...nextauth]/options";
+import { authOptions } from "@/app/api/auth/[...nextauth]/options";
 import { getServerSession } from 'next-auth';
 
 export async function POST(req) {
