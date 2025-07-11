@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { NextResponse } from "next/server";
 import { connectDb } from "@/lib/db";
-import { uploadImage } from "@/lib/cloudinary";
+// import { uploadImage } from "@/lib/cloudinary";
 import { Album } from "@/models/album.model";
 
 
@@ -43,7 +43,7 @@ export async function POST(req) {
     }
 
     const imageBuffer = Buffer.from(await imageFile.arrayBuffer());
-    const secureImageUrl = await uploadImage(imageBuffer);
+    const secureImageUrl ="adadad";
 
     if (!secureImageUrl) {
       return NextResponse.json({
