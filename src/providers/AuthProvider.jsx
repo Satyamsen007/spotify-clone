@@ -14,6 +14,7 @@ export default AuthProvider;
 
 // This component safely uses useSession inside SessionProvider
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 
 const InnerAuth = ({ children }) => {
   const { status } = useSession();
@@ -25,9 +26,12 @@ const InnerAuth = ({ children }) => {
           <div className="flex justify-center mb-8">
             <div className="relative">
               <div className="w-16 h-16 rounded-full border-4 border-green-500 border-t-transparent animate-spin"></div>
-              <img
+              <Image
                 src="/spotify.png"
                 alt="Spotify"
+                width={64}
+                height={64}
+                priority={true}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8"
               />
             </div>

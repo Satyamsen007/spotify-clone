@@ -1,10 +1,10 @@
 import { connectDb } from "@/lib/db";
+import { Album } from "@/models/album.model";
 import { Song } from "@/models/song.model";
 import { NextResponse } from "next/server";
 import { v2 as cloudinary } from 'cloudinary';
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { getServerSession } from 'next-auth';
-import Album from "@/models/album.model.js";
 export async function DELETE(req) {
   try {
     cloudinary.config({

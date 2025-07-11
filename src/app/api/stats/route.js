@@ -1,10 +1,10 @@
 import { Song } from "@/models/song.model";
+import { Album } from "@/models/album.model";
 import { User } from "@/models/user.model";
 import { connectDb } from "@/lib/db";
 import { NextResponse } from "next/server";
 import { authOptions } from "../auth/[...nextauth]/options";
 import { getServerSession } from 'next-auth';
-import Album from "@/models/album.model.js";
 export async function GET(req) {
   try {
     const session = await getServerSession(authOptions);
