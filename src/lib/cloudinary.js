@@ -16,7 +16,7 @@ const uploadFromBuffer = (buffer, options) => {
         resolve(result.secure_url);
       }
     );
-    
+
     // Convert buffer to readable stream
     const bufferStream = new Readable();
     bufferStream.push(buffer);
@@ -25,7 +25,7 @@ const uploadFromBuffer = (buffer, options) => {
   });
 };
 
-const uploadImage = async (buffer) => {
+export const uploadImage = async (buffer) => {
   try {
     return await uploadFromBuffer(buffer, {
       folder: 'Spotify/images',
@@ -37,7 +37,7 @@ const uploadImage = async (buffer) => {
   }
 };
 
-const uploadAudio = async (buffer) => {
+export const uploadAudio = async (buffer) => {
   try {
     return await uploadFromBuffer(buffer, {
       folder: 'Spotify/audios',
@@ -48,5 +48,3 @@ const uploadAudio = async (buffer) => {
     throw error;
   }
 };
-
-export { cloudinary, uploadImage, uploadAudio };

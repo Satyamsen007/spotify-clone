@@ -2,8 +2,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options.js";
 import { NextResponse } from "next/server";
 import { Album } from "@/models/album.model.js";
-import { uploadImage } from "@/lib/cloudinary.js";
 import { connectDb } from "@/lib/db.js";
+import { uploadImage } from "@/lib/cloudinary";
 
 export async function POST(req) {
   try {
