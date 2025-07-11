@@ -1,5 +1,5 @@
 import { connectDb } from "@/lib/db";
-import { Album } from "@/models/album.model";
+import Album from "@/models/album.model";
 import { Song } from "@/models/song.model";
 import { NextResponse } from "next/server";
 
