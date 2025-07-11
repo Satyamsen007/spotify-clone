@@ -13,7 +13,7 @@ import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 
 
-export default function mainLayout({ children }) {
+export default function MainLayout({ children }) {
   const { isMobile } = useCheckIsMobile();
   const { currentSong } = usePlayerStore();
   const { data: session } = useSession()
