@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎵 Spotify Clone – Modern Music Streaming App
 
-## Getting Started
+Welcome to Spotify Clone, a full-stack music streaming platform that replicates core Spotify features with a sleek UI. Play songs, create playlists, and enjoy personalized music recommendations—all powered by a custom backend.
 
-First, run the development server:
+Built with Next.js, Tailwind CSS, and MongoDB, this clone delivers seamless audio playback, user authentication, and responsive design for all devices.
+
+Stream music. Anytime. Anywhere.
+
+Fast. Responsive. Just like the real deal.
+
+---
+
+## 🚀 Live Demo
+
+🌐 [View Spotify Clone Online](https://spotify-clone-demo.vercel.app)
+
+---
+
+## 📸 Preview
+
+![Spotify Clone Screenshot](https://res.cloudinary.com/dw0kaofhj/image/upload/v1752214073/Screenshot_2025-07-11_112339_nxpoym.png)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**  
+- ⚛️ Next.js 15 (App Router) – React framework for optimized performance
+- 💨 Tailwind CSS – Utility-first styling with tailwind-merge
+- 🎨 Radix UI – Accessible UI primitives (Dialog, Dropdown, etc.)
+- 🏗️ Class Variance Authority – For building flexible component variants
+- 🎞️ Framer Motion 12 – Smooth animations & transitions
+- 🔊 Sonner – Modern toast notifications
+- 🎚️ Zustand – State management
+- 📦 React Resizable Panels – Adjustable UI layouts
+
+**Backend**  
+- 🔐 NextAuth.js – Authentication system
+- � MongoDB (Mongoose) – Database for users, playlists, and songs
+- 🔒 BcryptJS – Password hashing
+- ☁️ Cloudinary – Media storage and optimization
+
+**UI Components**  
+- ✨ Lucide React – Beautiful icons
+- 👤 Radix Avatar – Accessible avatar components
+- 🗂️ Radix Tabs – Tabbed interfaces
+- 🎚️ Radix Slider – Custom audio player controls
+
+---
+
+## ✨ Features
+
+- 🎵 **Music Playback** – Full audio player with play/pause, skip, and volume controls
+- 🔐 **User Authentication** – Secure sign-in with multiple providers
+- 📁 **Playlist Management** – Create, edit, and delete playlists
+- 🎨 **Dynamic UI** – Responsive layout with resizable panels
+- 🌓 **Dark/Light Mode** – Theme toggle with system preference support
+- 🖼️ **Image Optimization** – Cloudinary integration for fast media loading
+- 🎨 **Color Extraction** – Dynamic theming based on album art (ColorThief)
+- 📱 **100% Responsive** – Mobile, tablet & desktop friendly
+- ⚡ **Fast Loading** – Next.js optimization
+
+---
+
+## 🧑‍💻 Author
+
+**Satyam Sen**
+
+- 🌐 [Portfolio](https://satyamsen.dev) 
+- 💼 [LinkedIn](https://www.linkedin.com/in/satyam-sen-web-dev)
+
+---
+
+## 🤝 Contribution
+
+We welcome contributions from the community! Here's how you can get started:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Fork this repository  
+2. Create a new branch: git checkout -b feature/your-feature-name  
+3. Make your changes and commit: git commit -m "Add some feature"  
+4. Push to the branch: git push origin feature/your-feature-name  
+5. Open a Pull Request — we'll review it and get back to you!
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Folder Structure (Simplified)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+Spotify-Clone/
+├── next    
+├── public
+├── src/
+│   ├── app/
+│   │    ├── api/
+│   ├── components
+│   ├── hooks
+│   ├── lib
+│   ├── models
+│   ├── pages
+│   ├── providers
+│   ├── store
+│   ├── middleware.js
+├── .env.local
+├── .gitignore
+├── next.config.mjs
+├── package-lock.json
+├── package.json
