@@ -37,6 +37,7 @@ export const calculateTotalDuration = (songs) => {
 };
 
 const PlaylistPage = ({ playlistId }) => {
+  if (typeof window === "undefined") return null;
   const { songs, fetchSongs } = musicStore();
   const { fetchPlaylistById, isPlaylistLoading, currentPlaylist } = playlistStore()
   const { currentSong, isPlaying, playPlaylist, togglePlay } = usePlayerStore();

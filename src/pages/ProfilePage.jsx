@@ -19,6 +19,7 @@ import Link from 'next/link';
 import RemoveSongFromHistoryButton from '@/components/mainlayout/components/RemoveSongFromHistoryButton';
 
 const ProfilePage = () => {
+  if (typeof window === "undefined") return null;
   const [activeTab, setActiveTab] = useState('playlists');
   const { data: session, status } = useSession();
   const user = session?.user;
