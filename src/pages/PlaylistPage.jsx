@@ -186,7 +186,7 @@ const PlaylistPage = ({ playlistId }) => {
             }
 
             {/* Songs Table Section */}
-            <div className='bg-black/20 backdrop-blur-sm max-md:pb-40'>
+            <div className='bg-black/20 backdrop-blur-sm max-md:pb-44'>
               {currentPlaylist?.songs?.length > 0 ? (
                 <>
                   {/* Table Head Section */}

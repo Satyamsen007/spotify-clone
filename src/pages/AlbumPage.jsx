@@ -113,7 +113,7 @@ const AlbumPage = ({ albumId }) => {
             </div>
 
             {/* Songs Table Section */}
-            <div className='bg-black/20 backdrop-blur-sm max-md:pb-40'>
+            <div className='bg-black/20 backdrop-blur-sm max-md:pb-44'>
               <div className='grid grid-cols-[16px_4fr_2fr_1fr] gap-4 px-6 py-3 text-sm text-zinc-400'>
                 <div className="text-center">#</div>
                 <div>Title</div>
