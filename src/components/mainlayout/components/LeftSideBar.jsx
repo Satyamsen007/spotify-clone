@@ -23,9 +23,9 @@ const LeftSideBar = ({ setOpenSideBar }) => {
   const { data: session } = useSession();
 
   return (
-    <div className='h-full flex flex-col relative gap-2'>
+    <div className='h-full flex flex-col relative gap-2 max-md:bg-zinc-900'>
       {/* Navigation Menu */}
-      <div className='rounded-lg bg-zinc-900 p-4'>
+      <div className='rounded-lg bg-zinc-900 p-4 max-md:border-b-2 max-md:border-zinc-800/60 max-md:rounded-b-none max-md:sticky max-md:top-0'>
         <div className='space-y-2'>
           <Link href="/"
             className={cn(buttonVariants(

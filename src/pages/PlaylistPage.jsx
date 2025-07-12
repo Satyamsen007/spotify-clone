@@ -121,7 +121,7 @@ const PlaylistPage = ({ playlistId }) => {
                   )}
                   <div className='flex flex-col justify-end'>
                     <p className='text-sm font-medium'>Public Playlist</p>
-                    <h2 className='text-5xl md:text-7xl font-bold my-4'>{currentPlaylist?.title}</h2>
+                    <h2 className='text-4xl md:text-7xl font-bold my-4 max-md:my-2'>{currentPlaylist?.title}</h2>
                     <div className='flex items-center gap-2 text-sm text-zinc-100'>
                       <span className='font-medium text-white'>
                         {session?.user?.fullName}
@@ -186,7 +186,7 @@ const PlaylistPage = ({ playlistId }) => {
             }
 
             {/* Songs Table Section */}
-            <div className='bg-black/20 backdrop-blur-sm'>
+            <div className='bg-black/20 backdrop-blur-sm max-md:pb-40'>
               {currentPlaylist?.songs?.length > 0 ? (
                 <>
                   {/* Table Head Section */}

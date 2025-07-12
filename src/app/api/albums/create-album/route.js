@@ -62,7 +62,8 @@ export async function POST(req) {
       success: true,
       message: "Album Created Successfully",
       album,
-    }, { status: 201 })
+    }, { status: 200 });
+
   } catch (error) {
     console.log("Got error while creating an Album", error);
     return NextResponse.json({

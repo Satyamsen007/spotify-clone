@@ -9,9 +9,9 @@ const SongsTabContent = () => {
   return (
     <Card>
       <CardHeader>
-        <div className='flex items-center justify-between'>
+        <div className='flex items-center justify-between max-md:flex-col max-md:justify-center max-md:gap-4'>
           <div>
-            <CardTitle className="flex items-center gap-2">
+            <CardTitle className="flex items-center gap-2 max-md:justify-center">
               <Music className='size-5 text-emerald-500' />
               Songs Library
             </CardTitle>

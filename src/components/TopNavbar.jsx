@@ -1,6 +1,6 @@
 'use client'
 
-import { LayoutDashboardIcon, LogOut, Menu, Settings, User } from 'lucide-react';
+import { LayoutDashboardIcon, LogOut, Menu, User } from 'lucide-react';
 import Link from 'next/link';
 import SignInAuthButton from './SignInAuthButton';
 import { cn } from '@/lib/utils';
@@ -26,7 +26,7 @@ const TopNavbar = () => {
         <AnimatePresence>
           {openSideBar && (
             <motion.div
-              className='absolute md:hidden w-full z-30'
+              className='absolute md:hidden w-full z-[60]'
               initial={{ x: -300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}

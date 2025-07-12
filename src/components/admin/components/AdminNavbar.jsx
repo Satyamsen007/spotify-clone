@@ -16,11 +16,17 @@ const AdminNavbar = () => {
     <div className='flex items-center justify-between mb-8'>
       <div className='flex items-center gap-3'>
         <Link href="/" className='rounded-lg'>
-          <Image src="/spotify.png" alt='Spotify Logo' width={40} height={40} className='size-10 text-black' />
+          <Image
+            src="/spotify.png"
+            width={36}
+            height={36}
+            className="size-7 md:size-10 drop-shadow-lg animate-spin-slow cursor-pointer"
+            alt="Spotify logo"
+          />
         </Link>
         <div>
-          <h1 className='text-3xl font-bold'>Music Manager</h1>
-          <p className='text-zinc-400 mt-1'>Menage your music catalog</p>
+          <h1 className='text-lg md:text-3xl font-bold'>Music Manager</h1>
+          <p className='text-zinc-400 mt-1 max-md:text-xs max-md:mt-0'>Menage your music catalog</p>
         </div>
       </div>
       {/* User Avatar */}

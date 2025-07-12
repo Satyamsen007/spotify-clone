@@ -24,8 +24,44 @@ const AddSongDialog = () => {
     audio: null,
     image: null
   });
+  const [audioError, setAudioError] = useState("");
+  const [imageError, setImageError] = useState("");
   const audioInputRef = useRef(null);
   const imageInputRef = useRef(null);
+
+  const MAX_FILE_SIZE = 4 * 1024 * 1024; // 4MB
+
+  const handleAudioChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > MAX_FILE_SIZE) {
+        setAudioError("Audio file must be 4MB or less.");
+        setFiles((prev) => ({ ...prev, audio: null }));
+      } else {
+        setAudioError("");
+        setFiles((prev) => ({ ...prev, audio: file }));
+      }
+    } else {
+      setAudioError("");
+      setFiles((prev) => ({ ...prev, audio: null }));
+    }
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > MAX_FILE_SIZE) {
+        setImageError("Image file must be 4MB or less.");
+        setFiles((prev) => ({ ...prev, image: null }));
+      } else {
+        setImageError("");
+        setFiles((prev) => ({ ...prev, image: file }));
+      }
+    } else {
+      setImageError("");
+      setFiles((prev) => ({ ...prev, image: null }));
+    }
+  };
 
   const handleSubmit = async () => {
     setIsLoading(true);
@@ -72,6 +108,7 @@ const AddSongDialog = () => {
       setIsLoading(false)
     }
   }
+
   return (
     <Dialog open={songDialogOpen} onOpenChange={setSongDialogOpen}>
       <DialogTrigger asChild>
@@ -94,40 +131,46 @@ const AddSongDialog = () => {
             accept="audio/*"
             ref={audioInputRef}
             hidden
-            onChange={(e) => setFiles((prev) => ({ ...prev, audio: e.target.files[0] }))}
+            onChange={handleAudioChange}
           />
 
           <input type="file"
             accept="image/*"
             ref={imageInputRef}
             hidden
-            onChange={(e) => setFiles((prev) => ({ ...prev, image: e.target.files[0] }))}
+            onChange={handleImageChange}
           />
 
           {/* Image Upload Area */}
-          <div className="flex items-center justify-center p-6 border-2 border-dashed border-zinc-700 rounded-lg cursor-pointer"
-            onClick={() => imageInputRef.current?.click()}
-          >
-            <div className="text-center">
-              {
-                files.image ? (
-                  <div className="space-y-2">
-                    <div className="text-sm text-emerald-500">Image selected</div>
-                    <div className="text-xs text-zinc-400">{files.image.name.slice(0, 20)}</div>
-                  </div>
-                ) : (
-                  <>
-                    <div className="p-3 bg-zinc-800 rounded-full inline-block mb-2">
-                      <Upload className="size-6 text-zinc-400" />
+          <div className="flex flex-col items-center">
+            <div
+              className="flex items-center justify-center p-6 border-2 border-dashed border-zinc-700 rounded-lg cursor-pointer w-full"
+              onClick={() => imageInputRef.current?.click()}
+            >
+              <div className="text-center w-full">
+                {
+                  files.image ? (
+                    <div className="space-y-2">
+                      <div className="text-sm text-emerald-500">Image selected</div>
+                      <div className="text-xs text-zinc-400">{files.image.name.slice(0, 20)}</div>
                     </div>
-                    <div className="text-sm text-zinc-400 mb-2">Upload artwork</div>
-                    <Button variant="outline" size="sm" className="text-xs cursor-pointer">
-                      Choose File
-                    </Button>
-                  </>
-                )
-              }
+                  ) : (
+                    <>
+                      <div className="p-3 bg-zinc-800 rounded-full inline-block mb-2">
+                        <Upload className="size-6 text-zinc-400" />
+                      </div>
+                      <div className="text-sm text-zinc-400 mb-2">Upload artwork</div>
+                      <Button variant="outline" size="sm" className="text-xs cursor-pointer">
+                        Choose File
+                      </Button>
+                    </>
+                  )
+                }
+              </div>
             </div>
+            {imageError && (
+              <div className="text-xs text-red-500 mt-1 w-full text-left">{imageError}</div>
+            )}
           </div>
 
           {/* Audio Upload Area */}
@@ -138,6 +181,9 @@ const AddSongDialog = () => {
                 {files.audio ? files.audio.name.slice(0, 32) : "Choose Audio File"}
               </Button>
             </div>
+            {audioError && (
+              <div className="text-xs text-red-500 mt-1">{audioError}</div>
+            )}
           </div>
 
           {/* Other Feilds */}

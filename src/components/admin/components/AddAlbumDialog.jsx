@@ -19,7 +19,26 @@ const AddAlbumDialog = () => {
     releaseYear: new Date().getFullYear()
   });
   const [imagefile, setImageFile] = useState(null);
+  const [imageError, setImageError] = useState("");
   const imageInputRef = useRef(null);
+
+  const MAX_FILE_SIZE = 4 * 1024 * 1024; // 4MB
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > MAX_FILE_SIZE) {
+        setImageError("Image file must be 4MB or less.");
+        setImageFile(null);
+      } else {
+        setImageError("");
+        setImageFile(file);
+      }
+    } else {
+      setImageError("");
+      setImageFile(null);
+    }
+  };
 
   const handleSubmit = async () => {
     setIsLoading(true);
@@ -80,33 +99,38 @@ const AddAlbumDialog = () => {
             accept="image/*"
             ref={imageInputRef}
             hidden
-            onChange={(e) => setImageFile(e.target.files?.[0])}
+            onChange={handleImageChange}
           />
 
           {/* Image Upload Area */}
-          <div className="flex items-center justify-center p-6 border-2 border-dashed border-zinc-700 rounded-lg cursor-pointer"
-            onClick={() => imageInputRef.current?.click()}
-          >
-            <div className="text-center">
-              {
-                imagefile ? (
-                  <div className="space-y-2">
-                    <div className="text-sm text-violet-500">Image selected</div>
-                    <div className="text-xs text-zinc-400">{imagefile.name.slice(0, 20)}</div>
-                  </div>
-                ) : (
-                  <>
-                    <div className="p-3 bg-zinc-800 rounded-full inline-block mb-2">
-                      <Upload className="size-6 text-zinc-400" />
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center p-6 border-2 border-dashed border-zinc-700 rounded-lg cursor-pointer w-full"
+              onClick={() => imageInputRef.current?.click()}
+            >
+              <div className="text-center w-full">
+                {
+                  imagefile ? (
+                    <div className="space-y-2">
+                      <div className="text-sm text-violet-500">Image selected</div>
+                      <div className="text-xs text-zinc-400">{imagefile.name.slice(0, 20)}</div>
                     </div>
-                    <div className="text-sm text-zinc-400 mb-2">Upload album artwork</div>
-                    <Button variant="outline" size="sm" className="text-xs cursor-pointer">
-                      Choose File
-                    </Button>
-                  </>
-                )
-              }
+                  ) : (
+                    <>
+                      <div className="p-3 bg-zinc-800 rounded-full inline-block mb-2">
+                        <Upload className="size-6 text-zinc-400" />
+                      </div>
+                      <div className="text-sm text-zinc-400 mb-2">Upload album artwork</div>
+                      <Button variant="outline" size="sm" className="text-xs cursor-pointer">
+                        Choose File
+                      </Button>
+                    </>
+                  )
+                }
+              </div>
             </div>
+            {imageError && (
+              <div className="text-xs text-red-500 mt-1 w-full text-left">{imageError}</div>
+            )}
           </div>
 
           {/* Other Feilds */}

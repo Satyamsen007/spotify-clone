@@ -7,9 +7,9 @@ const AlbumsTabContent = () => {
   return (
     <Card className="bg-zinc-800/50 border-zinc-700/50">
       <CardHeader>
-        <div className='flex items-center justify-between'>
+        <div className='flex items-center justify-between max-md:flex-col max-md:gap-4 max-md:justify-center'>
           <div>
-            <CardTitle className="flex items-center gap-2">
+            <CardTitle className="flex items-center gap-2 max-md:justify-center">
               <Library className='size-5 text-violet-500' />
               Albums Library
             </CardTitle>
