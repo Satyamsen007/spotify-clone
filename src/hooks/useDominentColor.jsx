@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import ColorThief from 'colorthief';
+import { useEffect, useState } from 'react';
 
 export const useDominantColor = (imageUrl) => {
   const [color, setColor] = useState('#5038a0');

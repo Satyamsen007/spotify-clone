@@ -1,9 +1,9 @@
-import { NextResponse } from "next/server";
 import { connectDb } from "@/lib/db";
-import { authOptions } from "../../auth/[...nextauth]/options";
-import { getServerSession } from 'next-auth';
 import { Playlist } from "@/models/playlist.model";
 import { User } from "@/models/user.model";
+import { getServerSession } from 'next-auth';
+import { NextResponse } from "next/server";
+import { authOptions } from "../../auth/[...nextauth]/options";
 
 export async function POST(req) {
   try {

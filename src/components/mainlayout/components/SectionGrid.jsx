@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
-import SectionGridSkeleton from '../skeletons/SectionGridSkeleton'
 import Image from 'next/image'
+import SectionGridSkeleton from '../skeletons/SectionGridSkeleton'
 import PlayButton from './PlayButton'
 
 const SectionGrid = ({ title, songs, isLoading }) => {

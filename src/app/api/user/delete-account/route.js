@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../auth/[...nextauth]/options";
-import { User } from "@/models/user.model";
-import { NextResponse } from "next/server";
-import { v2 as cloudinary } from 'cloudinary';
 import { Playlist } from "@/models/playlist.model";
+import { User } from "@/models/user.model";
+import { v2 as cloudinary } from 'cloudinary';
+import { getServerSession } from "next-auth";
+import { NextResponse } from "next/server";
+import { authOptions } from "../../auth/[...nextauth]/options";
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

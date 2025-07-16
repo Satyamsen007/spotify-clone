@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "../../auth/[...nextauth]/options.js";
-import { NextResponse } from "next/server";
-import { Album } from "@/models/album.model";
-import { connectDb } from "@/lib/db.js";
 import { uploadImage } from "@/lib/cloudinary";
+import { connectDb } from "@/lib/db.js";
+import { Album } from "@/models/album.model";
+import { getServerSession } from "next-auth";
+import { NextResponse } from "next/server";
+import { authOptions } from "../../auth/[...nextauth]/options.js";
 
 export async function POST(req) {
   try {

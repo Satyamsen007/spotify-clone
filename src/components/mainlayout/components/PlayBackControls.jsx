@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
-import { usePlayerStore } from "@/store/playerStore"
-import { Laptop2, ListMusic, Mic2, Pause, Play, Repeat, Shuffle, SkipBack, SkipForward, Volume1, Volume2, VolumeOff } from "lucide-react";
+import { usePlayerStore } from "@/store/playerStore";
+import { Laptop2, ListMusic, Mic2, Pause, Play, Repeat, Shuffle, SkipBack, SkipForward, Volume2, VolumeOff } from "lucide-react";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import AddSongToPlaylist from "./AddSongToPlaylist";
-import { useSession } from "next-auth/react";
 
 const formatTime = (seconds) => {
   const minutes = Math.floor(seconds / 60);

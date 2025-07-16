@@ -1,8 +1,8 @@
 'use client';
 
-import { musicStore } from '@/store/musicStore'
-import FeaturedGridSkeleton from '../skeletons/FeaturedGridSkeleton';
+import { musicStore } from '@/store/musicStore';
 import Image from 'next/image';
+import FeaturedGridSkeleton from '../skeletons/FeaturedGridSkeleton';
 import PlayButton from './PlayButton';
 
 // utils/getGreeting.ts

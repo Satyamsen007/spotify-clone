@@ -1,9 +1,7 @@
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Music } from 'lucide-react'
-import React from 'react'
-import SongsTable from './SongsTable'
 import AddSongDialog from './AddSongDialog'
+import SongsTable from './SongsTable'
 
 const SongsTabContent = () => {
   return (

@@ -1,8 +1,8 @@
 import { connectDb } from "@/lib/db";
 import { Song } from "@/models/song.model";
+import { getServerSession } from 'next-auth';
 import { NextResponse } from "next/server";
 import { authOptions } from "../auth/[...nextauth]/options";
-import { getServerSession } from 'next-auth';
 export async function GET(req) {
   try {
     const session = await getServerSession(authOptions);

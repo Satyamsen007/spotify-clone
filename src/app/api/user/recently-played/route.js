@@ -1,7 +1,7 @@
-import { getServerSession } from "next-auth";
 import { User } from "@/models/user.model";
-import { authOptions } from "../../auth/[...nextauth]/options";
+import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
+import { authOptions } from "../../auth/[...nextauth]/options";
 
 
 export async function GET() {

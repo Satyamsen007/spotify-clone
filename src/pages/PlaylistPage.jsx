@@ -1,20 +1,20 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { musicStore } from '@/store/musicStore'
-import { usePlayerStore } from '@/store/playerStore';
-import { Clock, Music, Pause, Pencil, Play, Plus } from 'lucide-react';
-import Image from 'next/image';
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useDominantColor } from '@/hooks/useDominentColor';
-import AlbumPageSkeleton from '@/components/mainlayout/skeletons/AlbumPageSkeleton';
-import { playlistStore } from '@/store/playlistStore';
-import { useSession } from 'next-auth/react';
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import AlbumSongSearchDialog from '@/components/mainlayout/components/AlbumSongSearchDialog';
 import PlaylistEditDialog from '@/components/mainlayout/components/PlaylistEditDialog';
+import AlbumPageSkeleton from '@/components/mainlayout/skeletons/AlbumPageSkeleton';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { useDominantColor } from '@/hooks/useDominentColor';
+import { musicStore } from '@/store/musicStore';
+import { usePlayerStore } from '@/store/playerStore';
+import { playlistStore } from '@/store/playlistStore';
+import { motion } from 'framer-motion';
+import { Clock, Music, Pause, Pencil, Play, Plus } from 'lucide-react';
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
+import { useEffect } from 'react';
 
 
 export const formatDuration = (seconds) => {

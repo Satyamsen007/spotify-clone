@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button'
-import { userStore } from '@/store/userStore'
+import { Button } from '@/components/ui/button';
+import { userStore } from '@/store/userStore';
 import { Loader2, Trash2 } from 'lucide-react';
 
 const RemoveSongFromHistoryButton = ({ song }) => {

@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
 import { usePlayerStore } from '@/store/playerStore'
 import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 
 export const DynamicTitle = () => {
   const { currentSong } = usePlayerStore()

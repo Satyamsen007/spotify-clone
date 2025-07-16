@@ -1,19 +1,19 @@
 'use client'
 
-import { LayoutDashboardIcon, LogOut, Menu, User } from 'lucide-react';
-import Link from 'next/link';
-import SignInAuthButton from './SignInAuthButton';
 import { cn } from '@/lib/utils';
-import { Button, buttonVariants } from './ui/button';
+import { AnimatePresence, motion } from 'framer-motion';
+import { LayoutDashboardIcon, LogOut, Menu, User } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react';
-import { FaGithub } from 'react-icons/fa';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
 import LeftSideBar from './mainlayout/components/LeftSideBar';
-import { AnimatePresence, motion } from 'framer-motion';
+import SignInAuthButton from './SignInAuthButton';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Button, buttonVariants } from './ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
 
 const TopNavbar = () => {
   const { data: session } = useSession();

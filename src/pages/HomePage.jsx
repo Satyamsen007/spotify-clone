@@ -3,9 +3,8 @@
 import FeaturedSection from '@/components/mainlayout/components/FeaturedSection';
 import SectionGrid from '@/components/mainlayout/components/SectionGrid';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { musicStore } from '@/store/musicStore'
+import { musicStore } from '@/store/musicStore';
 import { usePlayerStore } from '@/store/playerStore';
-import { playlistStore } from '@/store/playlistStore';
 import { useEffect } from 'react';
 
 

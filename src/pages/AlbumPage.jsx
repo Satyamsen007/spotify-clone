@@ -1,15 +1,15 @@
 'use client';
 
+import AlbumPageSkeleton from '@/components/mainlayout/skeletons/AlbumPageSkeleton';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { musicStore } from '@/store/musicStore'
+import { useDominantColor } from '@/hooks/useDominentColor';
+import { musicStore } from '@/store/musicStore';
 import { usePlayerStore } from '@/store/playerStore';
+import { motion } from 'framer-motion';
 import { Clock, Pause, Play } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useDominantColor } from '@/hooks/useDominentColor';
-import AlbumPageSkeleton from '@/components/mainlayout/skeletons/AlbumPageSkeleton';
 
 export const formatDuration = (seconds) => {
   const minutes = Math.floor(seconds / 60);

@@ -1,10 +1,10 @@
+import { uploadImage } from "@/lib/cloudinary";
 import { connectDb } from "@/lib/db";
 import { Playlist } from "@/models/playlist.model";
+import { v2 as cloudinary } from 'cloudinary';
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 import { authOptions } from "../../../auth/[...nextauth]/options";
-import { uploadImage } from "@/lib/cloudinary";
-import { v2 as cloudinary } from 'cloudinary';
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

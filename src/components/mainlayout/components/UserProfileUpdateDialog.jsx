@@ -2,14 +2,11 @@ import { Button } from '@/components/ui/button'
 import { DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-import { playlistStore } from '@/store/playlistStore'
 import { userStore } from '@/store/userStore'
 import { Music, Pencil } from 'lucide-react'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
-import { toast } from 'sonner'
 
 const UserProfileUpdateDialog = () => {
   const { data: session, status, update } = useSession();

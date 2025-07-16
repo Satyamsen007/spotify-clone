@@ -1,7 +1,6 @@
 import axios from "axios";
 import { toast } from "sonner";
 import { create } from "zustand";
-import { musicStore } from "./musicStore";
 
 export const playlistStore = create((set, get) => ({
   playlists: [],

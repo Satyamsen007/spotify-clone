@@ -1,4 +1,4 @@
-import ProfilePage from "@/pages/ProfilePage"
+import ProfilePage from "@/pages/ProfilePage";
 
 export const metadata = {
   title: 'Your Profile | Spotify Clone',

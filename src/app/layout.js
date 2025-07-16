@@ -1,8 +1,8 @@
+import { DynamicTitle } from "@/components/DynamicTitle";
+import { Toaster } from "@/components/ui/sonner";
+import AuthProvider from "@/providers/AuthProvider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AuthProvider from "@/providers/AuthProvider";
-import { Toaster } from "@/components/ui/sonner";
-import { DynamicTitle } from "@/components/DynamicTitle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

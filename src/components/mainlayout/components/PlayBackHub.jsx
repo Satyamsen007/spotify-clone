@@ -3,12 +3,12 @@
 import SignInAuthButton from '@/components/SignInAuthButton';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { usePlayerStore } from '@/store/playerStore';
+import { motion } from 'framer-motion';
 import { Check, Copy, Ellipsis, MusicIcon, Pause, Play } from 'lucide-react';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { toast } from 'sonner';
 import { useState } from 'react';
+import { toast } from 'sonner';
 import AddSongToPlaylist from './AddSongToPlaylist';
 
 const PlayBackHub = ({ setCollapsPlayBackHub }) => {

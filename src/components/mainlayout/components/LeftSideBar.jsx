@@ -1,19 +1,19 @@
 'use client';
 
-import { Button, buttonVariants } from '@/components/ui/button';
+import SignInAuthButton from '@/components/SignInAuthButton';
+import { buttonVariants } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { CircleX, HomeIcon, Library, Loader2, Music, Plus, Trash2, User } from 'lucide-react';
-import Link from 'next/link';
-import PlaylistSkeleton from '../skeletons/PlaylistSkeleton';
 import { musicStore } from '@/store/musicStore';
-import Image from 'next/image';
-import { useSession } from 'next-auth/react';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { playlistStore } from '@/store/playlistStore';
-import SignInAuthButton from '@/components/SignInAuthButton';
-import EmptyPlaylistUi from './EmptyPlaylistUi';
+import { CircleX, HomeIcon, Library, Loader2, Music, Plus, Trash2, User } from 'lucide-react';
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import PlaylistSkeleton from '../skeletons/PlaylistSkeleton';
+import EmptyPlaylistUi from './EmptyPlaylistUi';
 
 const LeftSideBar = ({ setOpenSideBar }) => {
   const { albums, isLoading } = musicStore();
@@ -23,7 +23,7 @@ const LeftSideBar = ({ setOpenSideBar }) => {
   const { data: session } = useSession();
 
   return (
-    <div className='h-full flex flex-col relative gap-2 max-md:bg-zinc-900'>
+    <div className='h-full flex flex-col relative gap-2 max-md:bg-zinc-900 max-md:h-screen'>
       {/* Navigation Menu */}
       <div className='rounded-lg bg-zinc-900 p-4 max-md:border-b-2 max-md:border-zinc-800/60 max-md:rounded-b-none max-md:sticky max-md:top-0'>
         <div className='space-y-2'>

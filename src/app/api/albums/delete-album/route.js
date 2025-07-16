@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
 import { connectDb } from "@/lib/db";
 import { Album } from "@/models/album.model";
 import { v2 as cloudinary } from 'cloudinary';
-import { getServerSession } from 'next-auth'
+import { getServerSession } from 'next-auth';
+import { NextResponse } from "next/server";
 import { authOptions } from "../../auth/[...nextauth]/options";
 
 cloudinary.config({

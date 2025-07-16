@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { musicStore } from '@/store/musicStore'
+import { musicStore } from '@/store/musicStore';
 import { Calendar, Loader2, Music, Trash } from 'lucide-react';
 import Image from 'next/image';
 import AdminSongsSkeleton from '../skeletons/AdminSongsSkeleton';

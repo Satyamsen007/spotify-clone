@@ -1,22 +1,22 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useSession } from 'next-auth/react';
-import { Loader2, Music, Pause, Play, PlayIcon, Plus, Trash2Icon, UserRoundPen } from 'lucide-react';
-import { playlistStore } from '@/store/playlistStore';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import PlayButton from '@/components/mainlayout/components/PlayButton';
-import { usePlayerStore } from '@/store/playerStore';
+import RemoveSongFromHistoryButton from '@/components/mainlayout/components/RemoveSongFromHistoryButton';
+import UserProfileUpdateDialog from '@/components/mainlayout/components/UserProfileUpdateDialog';
+import ProfilePageSkeleton from '@/components/mainlayout/skeletons/ProfilePageSkeleton';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
-import { toast } from 'sonner';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { usePlayerStore } from '@/store/playerStore';
+import { playlistStore } from '@/store/playlistStore';
 import { userStore } from '@/store/userStore';
-import UserProfileUpdateDialog from '@/components/mainlayout/components/UserProfileUpdateDialog';
-import ProfilePageSkeleton from '@/components/mainlayout/skeletons/ProfilePageSkeleton';
+import { Loader2, Music, Pause, Play, Plus, Trash2Icon, UserRoundPen } from 'lucide-react';
+import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 import Link from 'next/link';
-import RemoveSongFromHistoryButton from '@/components/mainlayout/components/RemoveSongFromHistoryButton';
+import { useEffect, useState } from 'react';
+import { toast } from 'sonner';
 
 const ProfilePage = () => {
   if (typeof window === "undefined") return null;

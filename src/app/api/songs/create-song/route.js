@@ -1,10 +1,10 @@
 import { uploadAudio, uploadImage } from "@/lib/cloudinary";
+import { connectDb } from "@/lib/db";
 import { Album } from "@/models/album.model";
 import { Song } from "@/models/song.model";
-import { NextResponse } from "next/server";
-import { connectDb } from "@/lib/db";
-import { authOptions } from "../../auth/[...nextauth]/options";
 import { getServerSession } from 'next-auth';
+import { NextResponse } from "next/server";
+import { authOptions } from "../../auth/[...nextauth]/options";
 export async function POST(req) {
   try {
     const session = await getServerSession(authOptions);

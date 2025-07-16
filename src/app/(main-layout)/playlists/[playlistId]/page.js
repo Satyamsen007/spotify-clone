@@ -1,4 +1,4 @@
-import PlaylistPage from '@/pages/PlaylistPage'
+import PlaylistPage from '@/pages/PlaylistPage';
 
 export const metadata = {
   title: 'Your Personal Playlist | Spotify Clone',

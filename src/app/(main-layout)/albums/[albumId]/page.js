@@ -1,4 +1,4 @@
-import AlbumPage from '@/pages/AlbumPage'
+import AlbumPage from '@/pages/AlbumPage';
 
 export async function generateMetadata({ params }) {
   const parts = await params.albumId.split('-');

@@ -1,9 +1,11 @@
 'use client';
 
+import axios from 'axios';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { Button, buttonVariants } from "./ui/button";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
+import { toast } from 'sonner';
+import { Button } from "./ui/button";
 import {
   Dialog,
   DialogContent,
@@ -12,13 +14,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { useRouter } from 'next/navigation';
-import { signIn } from 'next-auth/react';
-import { ArrowDown, Rocket } from 'lucide-react';
-import axios from 'axios';
-import { toast } from 'sonner';
-import { cn } from '@/lib/utils';
 
 const SignInAuthButton = () => {
   const router = useRouter();

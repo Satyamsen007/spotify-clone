@@ -1,9 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { musicStore } from '@/store/musicStore'
+import { musicStore } from '@/store/musicStore';
 import { Calendar, Loader2, Trash } from 'lucide-react';
 import Image from 'next/image';
-import React from 'react'
 import AdminSongsSkeleton from '../skeletons/AdminSongsSkeleton';
 
 const SongsTable = () => {
