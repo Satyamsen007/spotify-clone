@@ -94,7 +94,7 @@ const AdminNavbar = () => {
             </DropdownMenuItem>
 
             <DropdownMenuItem className="px-5 py-3 text-sm hover:bg-green-500/10 cursor-pointer transition-all">
-              <Link href="/profile" className="w-full flex items-center gap-2 text-zinc-200 hover:text-green-400">
+              <Link href="https://github.com/Satyamsen007/spotify-clone" target='_blank' className="w-full flex items-center gap-2 text-zinc-200 hover:text-green-400">
                 <FaGithub className="w-4 h-4 text-green-400" />
                 Github
               </Link>
